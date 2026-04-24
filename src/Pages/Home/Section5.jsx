@@ -13,7 +13,7 @@ const Section5 = () => {
 
 
 
-<section className="sec-padding bg--secondary">
+<section className="sec-padding bg--secondary hide-mobile-section">
   <div className="container">
     <div className="page-head">
       <span className="page-sub-title">Testimonials</span>
@@ -126,7 +126,7 @@ const Section5 = () => {
 
 
 
-  <section className="sec-padding-t">
+  <section className="sec-padding-t hide-mobile-section">
   <div className="container">
     <div className="page-head">
       <span className="page-sub-title">New Trends</span>

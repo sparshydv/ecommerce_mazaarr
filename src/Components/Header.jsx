@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [activemenu, setactivemenu] = useState("");
@@ -16,7 +17,7 @@ const Header = () => {
           <div className="row">
             {/*Logo*/}
             <div className="site-logo">
-              <a href="home.html">
+              <Link to="/">
                 <img
                   src="img/logo--dark.png"
                   className="logo-dark"
@@ -27,30 +28,30 @@ const Header = () => {
                   className="logo-light"
                   alt="Mazaar"
                 />
-              </a>
+              </Link>
             </div>
             {/*End Logo*/}
 
 
 
             {/*Navigation Menu*/}
-            <div className={mobileordesktop == true ? "nav-menu show-on-mobile" : "nav-menu"}>
+            <div className={mobileordesktop ? "nav-menu show-on-mobile" : "nav-menu"}>
               <ul>
                 <li className="nav-menu-item">
-                  <a href="home.html">Home</a>
+                  <Link to="/">Home</Link>
                   {/*Dropdown*/}
                   <div className="nav-dropdown col3-dropdown">
                     <div className="row">
                       <div className="col-lg-4 col-md-6">
                         <ul>
                           <li>
-                            <a href="home.html">
+                            <Link to="/">
                               <img
                                 src="img/banner/themeshots/shot_home01.jpg"
                                 alt="Banner"
                               />
                               <figure className="text--center">Home 01</figure>
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
@@ -124,8 +125,8 @@ const Header = () => {
                   {/*End Dropdown*/}
                 </li>
                 <li className="nav-menu-item mega-menu">
-                  <a
-                    href="#"
+                  <button
+                    type="button"
                     onMouseLeave={() => {
                       setactivemenu("");
                     }}
@@ -134,7 +135,7 @@ const Header = () => {
                     }}
                   >
                     Shop
-                  </a>
+                  </button>
                   {/*Dropdown*/}
                   <div
                     className="nav-dropdown mega-dropdown"
@@ -145,7 +146,7 @@ const Header = () => {
                       setactivemenu("Shop");
                     }}
                     style={{
-                      display: activemenu == "Shop" ? "block" : "none",
+                      display: activemenu === "Shop" ? "block" : "none",
                       opacity: 1,
                     }}
                   >
@@ -158,30 +159,14 @@ const Header = () => {
                                 All Collection
                               </span>
                             </li>
-                            <li>
-                              <a href="#">New Clothes</a>
-                            </li>
-                            <li>
-                              <a href="#">Back In Stock Clothes</a>
-                            </li>
-                            <li>
-                              <a href="#">Dresses</a>
-                            </li>
-                            <li>
-                              <a href="#">Trousers &amp; Chinos</a>
-                            </li>
-                            <li>
-                              <a href="#">Tops &amp; Tees</a>
-                            </li>
-                            <li>
-                              <a href="#">Shirt</a>
-                            </li>
-                            <li>
-                              <a href="#">Sweatshirts</a>
-                            </li>
-                            <li>
-                              <a href="#">Sweaters</a>
-                            </li>
+                            <li><button type="button">New Clothes</button></li>
+                            <li><button type="button">Back In Stock Clothes</button></li>
+                            <li><button type="button">Dresses</button></li>
+                            <li><button type="button">Trousers &amp; Chinos</button></li>
+                            <li><button type="button">Tops &amp; Tees</button></li>
+                            <li><button type="button">Shirt</button></li>
+                            <li><button type="button">Sweatshirts</button></li>
+                            <li><button type="button">Sweaters</button></li>
                           </ul>
                         </div>
                         <div className="col-lg-3">
@@ -268,8 +253,8 @@ const Header = () => {
                   {/*End Dropdown*/}
                 </li>
                 <li className="nav-menu-item">
-                  <a
-                    href="#"
+                  <button
+                    type="button"
                     onMouseLeave={() => {
                       setactivemenu("");
                     }}
@@ -278,7 +263,7 @@ const Header = () => {
                     }}
                   >
                     Man
-                  </a>
+                  </button>
                   {/*Dropdown*/}
                   <div
                     className="nav-dropdown col2-dropdown"
@@ -289,7 +274,7 @@ const Header = () => {
                       setactivemenu("Man");
                     }}
                     style={{
-                      display: activemenu == "Man" ? "block" : "none",
+                      display: activemenu === "Man" ? "block" : "none",
                       opacity: 1,
                     }}
                   >
@@ -299,30 +284,14 @@ const Header = () => {
                           <li>
                             <span className="dropdown-title">Chothes</span>
                           </li>
-                          <li>
-                            <a href="#">New In clothing</a>
-                          </li>
-                          <li>
-                            <a href="#">New In Footwear</a>
-                          </li>
-                          <li>
-                            <a href="#">New In Bags</a>
-                          </li>
-                          <li>
-                            <a href="#">New In Watches</a>
-                          </li>
-                          <li>
-                            <a href="#">Shirt</a>
-                          </li>
-                          <li>
-                            <a href="#">Jeans</a>
-                          </li>
-                          <li>
-                            <a href="#">Casual Trousers</a>
-                          </li>
-                          <li>
-                            <a href="#">Suits &amp; Blazers</a>
-                          </li>
+                          <li><button type="button">New In clothing</button></li>
+                          <li><button type="button">New In Footwear</button></li>
+                          <li><button type="button">New In Bags</button></li>
+                          <li><button type="button">New In Watches</button></li>
+                          <li><button type="button">Shirt</button></li>
+                          <li><button type="button">Jeans</button></li>
+                          <li><button type="button">Casual Trousers</button></li>
+                          <li><button type="button">Suits &amp; Blazers</button></li>
                         </ul>
                       </div>
                       <div className="col-lg-6">
@@ -330,30 +299,14 @@ const Header = () => {
                           <li>
                             <span className="dropdown-title">Watches</span>
                           </li>
-                          <li>
-                            <a href="#">Analog</a>
-                          </li>
-                          <li>
-                            <a href="#">Chronograph</a>
-                          </li>
-                          <li>
-                            <a href="#">Digital</a>
-                          </li>
-                          <li>
-                            <a href="#">Watch Cases</a>
-                          </li>
-                          <li>
-                            <a href="#">Shoes</a>
-                          </li>
-                          <li>
-                            <a href="#">Lether Wallets</a>
-                          </li>
-                          <li>
-                            <a href="#">Belts</a>
-                          </li>
-                          <li>
-                            <a href="#">Accesories</a>
-                          </li>
+                          <li><button type="button">Analog</button></li>
+                          <li><button type="button">Chronograph</button></li>
+                          <li><button type="button">Digital</button></li>
+                          <li><button type="button">Watch Cases</button></li>
+                          <li><button type="button">Shoes</button></li>
+                          <li><button type="button">Lether Wallets</button></li>
+                          <li><button type="button">Belts</button></li>
+                          <li><button type="button">Accesories</button></li>
                         </ul>
                       </div>
                     </div>
@@ -361,8 +314,8 @@ const Header = () => {
                   {/*End Dropdown*/}
                 </li>
                 <li className="nav-menu-item">
-                  <a
-                    href="product_listing-no_sidebar.html"
+                  <Link
+                    to="/product_listing"
                     onMouseLeave={() => {
                       setactivemenu("");
                     }}
@@ -371,7 +324,7 @@ const Header = () => {
                     }}
                   >
                     Women
-                  </a>
+                  </Link>
                   {/*Dropdown*/}
                   <div
                     className="nav-dropdown col3-dropdown center"
@@ -382,7 +335,7 @@ const Header = () => {
                       setactivemenu("Women");
                     }}
                     style={{
-                      display: activemenu == "Women" ? "block" : "none",
+                      display: activemenu === "Women" ? "block" : "none",
                       opacity: 1,
                     }}
                   >
@@ -392,27 +345,13 @@ const Header = () => {
                           <li>
                             <span className="dropdown-title">Clothes</span>
                           </li>
-                          <li>
-                            <a href="#">Back In Stock Clothes</a>
-                          </li>
-                          <li>
-                            <a href="#">Dresses</a>
-                          </li>
-                          <li>
-                            <a href="#">Tops &amp; Tees</a>
-                          </li>
-                          <li>
-                            <a href="#">Sweatshirts</a>
-                          </li>
-                          <li>
-                            <a href="#">Sweaters </a>
-                          </li>
-                          <li>
-                            <a href="#">Kimonos</a>
-                          </li>
-                          <li>
-                            <a href="#">Jackets</a>
-                          </li>
+                          <li><button type="button">Back In Stock Clothes</button></li>
+                          <li><button type="button">Dresses</button></li>
+                          <li><button type="button">Tops &amp; Tees</button></li>
+                          <li><button type="button">Sweatshirts</button></li>
+                          <li><button type="button">Sweaters</button></li>
+                          <li><button type="button">Kimonos</button></li>
+                          <li><button type="button">Jackets</button></li>
                         </ul>
                       </div>
                       <div className="col-lg-4">
@@ -422,27 +361,13 @@ const Header = () => {
                               Beauty &amp; Wellness
                             </span>
                           </li>
-                          <li>
-                            <a href="#">All Wellness</a>
-                          </li>
-                          <li>
-                            <a href="#">Makeup</a>
-                          </li>
-                          <li>
-                            <a href="#">Skincare</a>
-                          </li>
-                          <li>
-                            <a href="#">Body</a>
-                          </li>
-                          <li>
-                            <a href="#">Sun Care</a>
-                          </li>
-                          <li>
-                            <a href="#">Hair</a>
-                          </li>
-                          <li>
-                            <a href="#">Aromatherapy</a>
-                          </li>
+                          <li><button type="button">All Wellness</button></li>
+                          <li><button type="button">Makeup</button></li>
+                          <li><button type="button">Skincare</button></li>
+                          <li><button type="button">Body</button></li>
+                          <li><button type="button">Sun Care</button></li>
+                          <li><button type="button">Hair</button></li>
+                          <li><button type="button">Aromatherapy</button></li>
                         </ul>
                       </div>
                       <div className="col-lg-4">
@@ -450,27 +375,13 @@ const Header = () => {
                           <li>
                             <span className="dropdown-title">Accesories</span>
                           </li>
-                          <li>
-                            <a href="#">New Accesories</a>
-                          </li>
-                          <li>
-                            <a href="#">Jewelry</a>
-                          </li>
-                          <li>
-                            <a href="#">Bags</a>
-                          </li>
-                          <li>
-                            <a href="#">Hats</a>
-                          </li>
-                          <li>
-                            <a href="#">Sunglasses</a>
-                          </li>
-                          <li>
-                            <a href="#">Scarves</a>
-                          </li>
-                          <li>
-                            <a href="#">Belts</a>
-                          </li>
+                          <li><button type="button">New Accesories</button></li>
+                          <li><button type="button">Jewelry</button></li>
+                          <li><button type="button">Bags</button></li>
+                          <li><button type="button">Hats</button></li>
+                          <li><button type="button">Sunglasses</button></li>
+                          <li><button type="button">Scarves</button></li>
+                          <li><button type="button">Belts</button></li>
                         </ul>
                       </div>
                     </div>
@@ -478,8 +389,8 @@ const Header = () => {
                   {/*End Dropdown*/}
                 </li>
                 <li className="nav-menu-item mega-menu">
-                  <a
-                    href="#"
+                  <button
+                    type="button"
                     className="sale-color"
                     onMouseLeave={() => {
                       setactivemenu("");
@@ -489,7 +400,7 @@ const Header = () => {
                     }}
                   >
                     Sale
-                  </a>
+                  </button>
                   {/*Dropdown*/}
                   <div
                     className="nav-dropdown mega-dropdown"
@@ -500,7 +411,7 @@ const Header = () => {
                       setactivemenu("Sale");
                     }}
                     style={{
-                      display: activemenu == "Sale" ? "block" : "none",
+                      display: activemenu === "Sale" ? "block" : "none",
                       opacity: 1,
                     }}
                   >
@@ -508,91 +419,85 @@ const Header = () => {
                       <div className="row">
                         <div className="col-lg-3">
                           <ul>
+                            <li><button type="button">New Sale</button></li>
+                            <li><button type="button">All Sale</button></li>
+                            <li><button type="button">Featured Sale</button></li>
                             <li>
-                              <a href="#">New Sale</a>
+                              <button type="button">Sale Dresses</button>
                             </li>
                             <li>
-                              <a href="#">All Sale</a>
+                              <button type="button">Sale Tops</button>
                             </li>
                             <li>
-                              <a href="#">Featured Sale</a>
-                            </li>
-                            <li>
-                              <a href="#">Sale Dresses</a>
-                            </li>
-                            <li>
-                              <a href="#">Sale Tops</a>
-                            </li>
-                            <li>
-                              <a href="#">Sale Sweaters</a>
+                              <button type="button">Sale Sweaters</button>
                             </li>
                           </ul>
                         </div>
                         <div className="col-lg-3">
                           <ul>
                             <li>
-                              <a href="#">Sale Jackets &amp; Outerwear </a>
+                              <button type="button">Sale Jackets &amp; Outerwear </button>
                             </li>
                             <li>
-                              <a href="#">Sale Bottoms</a>
+                              <button type="button">Sale Bottoms</button>
                             </li>
                             <li>
-                              <a href="#">Sale Intimates</a>
+                              <button type="button">Sale Intimates</button>
                             </li>
                             <li>
-                              <a href="#">Sale Accessories</a>
+                              <button type="button">Sale Accessories</button>
                             </li>
                             <li>
-                              <a href="#">Sale Shoes</a>
+                              <button type="button">Sale Shoes</button>
                             </li>
                             <li>
-                              <a href="#">Sale Bags</a>
+                              <button type="button">Sale Bags</button>
                             </li>
                           </ul>
                         </div>
                         <div className="col-lg-3">
                           <ul>
                             <li>
-                              <a href="#">Sale Beauty &amp; Wellness</a>
+                              <button type="button">Sale Beauty &amp; Wellness</button>
                             </li>
                             <li>
-                              <a href="#">Sale FP Movement</a>
+                              <button type="button">Sale FP Movement</button>
                             </li>
                             <li>
-                              <a href="#">Sale Swim</a>
+                              <button type="button">Sale Swim</button>
                             </li>
                             <li>
-                              <a href="#">
+                              <button type="button">
                                 Sale FP Beach &amp; Endless Summer{" "}
-                              </a>
+                              </button>
                             </li>
                             <li>
-                              <a href="#">Sale Under $19.95</a>
+                              <button type="button">Sale Under $19.95</button>
                             </li>
                             <li>
-                              <a href="#">Sale Sport</a>
+                              <button type="button">Sale Sport</button>
                             </li>
                           </ul>
                         </div>
                         <div className="col-lg-3">
                           <ul>
                             <li>
-                              <a href="#">Sale Under $29.95 </a>
+                              <button type="button">Sale Under $29.95 </button>
                             </li>
                             <li>
-                              <a href="#">Sale Under $49.95 </a>
+                              <button type="button">Sale Under $49.95 </button>
                             </li>
                             <li>
-                              <a href="#">Sale Under $59.95 </a>
+                              <button type="button">Sale Under $59.95 </button>
                             </li>
                             <li>
-                              <a href="#">Sale Under $69.95</a>
+                              <button type="button">Sale Under $69.95</button>
                             </li>
                             <li>
-                              <a href="#">Sale Under $89.95 </a>
+                              <button type="button">Sale Under $89.95 </button>
                             </li>
                             <li>
-                              <a href="#">Sale Under $99.95 </a>
+                              <button type="button">Sale Under $99.95 </button>
                             </li>
                           </ul>
                         </div>
@@ -602,12 +507,12 @@ const Header = () => {
                   {/*End Dropdown*/}
                 </li>
                 <li className="nav-menu-item">
-                  <a href="#">Blog</a>
+                  <button type="button">Blog</button>
                   {/*Dropdown*/}
                   <div className="nav-dropdown">
                     <ul>
                       <li className="nav-menu-item">
-                        <a href="#">Blog Grid</a>
+                        <button type="button">Blog Grid</button>
                         <ul className="nav-dropdown-sub">
                           <li>
                             <a href="blog_grid-2_col.html">2 column</a>
@@ -621,10 +526,10 @@ const Header = () => {
                         <a href="blog_masonry.html">Masonry</a>
                       </li>
                       <li className="nav-menu-item">
-                        <a href="#">List</a>
+                        <button type="button">List</button>
                         <ul className="nav-dropdown-sub">
                           <li>
-                            <a href="blog_list.html">List 1</a>
+                            <Link to="/blog">List 1</Link>
                           </li>
                           <li>
                             <a href="blog_list-sidebar_right.html">
@@ -634,39 +539,39 @@ const Header = () => {
                         </ul>
                       </li>
                       <li className="nav-menu-item">
-                        <a href="blog_single.html">Blog Single</a>
+                        <Link to="/blog-single">Blog Single</Link>
                       </li>
                       <li className="nav-menu-item">
-                        <a href="#">Submenu Right</a>
+                        <button type="button">Submenu Right</button>
                         <ul className="nav-dropdown-sub">
                           <li>
-                            <a href="#">Submenu 1</a>
+                            <button type="button">Submenu 1</button>
                           </li>
                           <li>
-                            <a href="#">Submenu 2</a>
+                            <button type="button">Submenu 2</button>
                           </li>
                           <li>
-                            <a href="#">Submenu 3</a>
+                            <button type="button">Submenu 3</button>
                           </li>
                           <li>
-                            <a href="#">Submenu 4</a>
+                            <button type="button">Submenu 4</button>
                           </li>
                         </ul>
                       </li>
                       <li className="nav-menu-item">
-                        <a href="#">Submenu left</a>
+                        <button type="button">Submenu left</button>
                         <ul className="nav-dropdown-sub left">
                           <li>
-                            <a href="#">Submenu 1</a>
+                            <button type="button">Submenu 1</button>
                           </li>
                           <li>
-                            <a href="#">Submenu 2</a>
+                            <button type="button">Submenu 2</button>
                           </li>
                           <li>
-                            <a href="#">Submenu 3</a>
+                            <button type="button">Submenu 3</button>
                           </li>
                           <li>
-                            <a href="#">Submenu 4</a>
+                            <button type="button">Submenu 4</button>
                           </li>
                         </ul>
                       </li>
@@ -675,7 +580,7 @@ const Header = () => {
                   {/*End Dropdown*/}
                 </li>
                 <li className="nav-menu-item">
-                  <a href="#">Pages</a>
+                  <button type="button">Pages</button>
                   {/*Dropdown*/}
                   <div className="nav-dropdown col2-dropdown left">
                     <div className="row">
@@ -700,16 +605,16 @@ const Header = () => {
                             </a>
                           </li>
                           <li>
-                            <a href="product_detail.html">Product Detail 1</a>
+                            <Link to="/product_detail">Product Detail 1</Link>
                           </li>
                           <li>
-                            <a href="product_detail_2.html">Product Detail 2</a>
+                            <Link to="/product_detail">Product Detail 2</Link>
                           </li>
                           <li>
-                            <a href="product_detail_3.html">Product Detail 3</a>
+                            <Link to="/product_detail">Product Detail 3</Link>
                           </li>
                           <li>
-                            <a href="product_detail_4.html">Product Detail 4</a>
+                            <Link to="/product_detail">Product Detail 4</Link>
                           </li>
                         </ul>
                         <ul>
@@ -757,30 +662,24 @@ const Header = () => {
                             <span className="dropdown-title">Extra Pages</span>
                           </li>
                           <li>
-                            <a href="cart.html">Cart</a>
+                            <Link to="/cart">Cart</Link>
                           </li>
                           <li>
-                            <a href="checkout.html">Checkout</a>
+                            <Link to="/checkout">Checkout</Link>
                           </li>
                           <li>
-                            <a href="login_register.html">
+                            <Link to="/login_register">
                               Login &amp; Register
-                            </a>
+                            </Link>
                           </li>
                           <li>
-                            <a href="about.html">About</a>
+                            <Link to="/about">About</Link>
                           </li>
                           <li>
-                            <a href="contact.html">Contact</a>
+                            <Link to="/contact">Contact</Link>
                           </li>
                           <li>
-                            <a href="faq.html">Faq</a>
-                          </li>
-                          <li>
-                            <a href="comming_soon.html">Comming Soon</a>
-                          </li>
-                          <li>
-                            <a href="error_page.html">Error 404</a>
+                            <Link to="/error">Error 404</Link>
                           </li>
                         </ul>
                       </div>
@@ -790,16 +689,12 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-            {/*End Navigation Menu*/}
-
-
-
             {/*Nav Icons*/}
             <div className="nav-icons">
               <ul>
                 <li className="nav-icon-item d-lg-none">
                   <div
-                    className={mobileordesktop == true ? "nav-icon-trigger menu-mobile-btn active" : "nav-icon-trigger menu-mobile-btn"}
+                    className={mobileordesktop ? "nav-icon-trigger menu-mobile-btn active" : "nav-icon-trigger menu-mobile-btn"}
                     onClick={()=>{setmobileordesktop(!mobileordesktop)}}
                     title="Navigation Menu"
                   >
@@ -819,12 +714,12 @@ const Header = () => {
                   </div>
                 </li>
                 <li className="nav-icon-item d-none d-lg-table-cell">
-                  <a className="nav-icon-trigger" href="#" title="Whishlist">
+                  <button className="nav-icon-trigger" type="button" title="Whishlist">
                     <span>
                       <i className="ti-heart" />
                       <span className="nav-icon-count">0</span>
                     </span>
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-icon-item">
                   <div
@@ -850,34 +745,34 @@ const Header = () => {
                   <div className="dropdown--menu dropdown--right">
                     <ul>
                       <li>
-                        <a href="login_register.html">My Account</a>
+                        <Link to="/login_register">My Account</Link>
                       </li>
                       <li>
-                        <a href="#">Order Tracking</a>
+                        <button type="button">Order Tracking</button>
                       </li>
                       <li>
-                        <a href="#">Compare</a>
+                        <button type="button">Compare</button>
                       </li>
                       <li>
-                        <a href="#">Wishlist</a>
+                        <button type="button">Wishlist</button>
                       </li>
                       <li>
-                        <a href="cart.html">Cart</a>
+                        <Link to="/cart">Cart</Link>
                       </li>
                       <li>
-                        <a href="#">Lost Password</a>
+                        <button type="button">Lost Password</button>
                       </li>
                       <li>
                         <hr />
                       </li>
                       <li>
-                        <a
-                          href="#"
+                        <button
+                          type="button"
                           className="btn btn--primary btn--sm btn--full"
                         >
                           <i className="fa fa-shopping-cart" />
                           Purchase Now
-                        </a>
+                        </button>
                       </li>
                     </ul>
                   </div>

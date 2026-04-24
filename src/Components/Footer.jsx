@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -18,36 +19,36 @@ const Footer = () => {
         <div className="footer-widget col-sm-4 col-md-4 col-lg-2 col-12 mb-lg-0 mb-4">
           <h6 className="footer-widget-title">Information</h6>
           <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">My account</a></li>
-            <li><a href="#">Wishlist</a></li>
+            <li><button type="button">About Us</button></li>
+            <li><Link to="/contact">Contact Us</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><button type="button">Portfolio</button></li>
+            <li><Link to="/login_register">My account</Link></li>
+            <li><button type="button">Wishlist</button></li>
           </ul>
         </div>
         <div className="footer-widget col-sm-4 col-md-4 col-lg-2 col-12 mb-lg-0 mb-4">
           <h6 className="footer-widget-title">Usefull Links</h6>
           <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Shipping Information</a></li>
-            <li><a href="#">Terms &amp; Condition</a></li>
-            <li><a href="#">Cart</a></li>
-            <li><a href="#">Checkout</a></li>
-            <li><a href="#">My account</a></li>
-            <li><a href="#">Order Tracking</a></li>
+            <li><button type="button">Privacy Policy</button></li>
+            <li><button type="button">Shipping Information</button></li>
+            <li><button type="button">Terms &amp; Condition</button></li>
+            <li><Link to="/cart">Cart</Link></li>
+            <li><Link to="/checkout">Checkout</Link></li>
+            <li><Link to="/login_register">My account</Link></li>
+            <li><button type="button">Order Tracking</button></li>
           </ul>
         </div>
         <div className="footer-widget col-sm-4 col-md-4 col-lg-2 col-12 mb-lg-0 mb-4">
           <h6 className="footer-widget-title">Our Link</h6>
           <ul>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Fashion</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">Brand</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Beauty</a></li>
+            <li><button type="button">Men</button></li>
+            <li><button type="button">Women</button></li>
+            <li><button type="button">Fashion</button></li>
+            <li><Link to="/contact">Contact us</Link></li>
+            <li><button type="button">Brand</button></li>
+            <li><button type="button">Accessories</button></li>
+            <li><button type="button">Beauty</button></li>
           </ul>
         </div>
         <div className="footer-widget col-lg-3 col-12 mb-lg-0 mb-3">
@@ -82,7 +83,7 @@ const Footer = () => {
     <div className="container">
       <div className="row">
         <div className="col-md-6 text-center text-md-left">
-          <p className="footer-copyright">© 2018 Mazaar Shop, Template by <a href="http://nileforest.com/" target="_blank">Nileforest</a></p>
+          <p className="footer-copyright">© 2026 Mazaar Shop</p>
         </div>
         <div className="col-md-6 text-center text-md-right">
           <img src="img/payment_logos.png" alt="payment logos" />

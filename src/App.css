@@ -1,3 +1,105 @@
 body{
   margin: 0px;
 }
+
+/* Keep converted placeholder buttons visually identical to theme links */
+.header .nav-menu button,
+.header .nav-dropdown button,
+.footer-widget button {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.header .nav-dropdown button {
+  display: block;
+  width: 100%;
+}
+
+/* Keep icon buttons identical to original anchor styling */
+.nav-icons .nav-icon-item > button.nav-icon-trigger {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.header .nav-menu > ul > li > a,
+.header .nav-menu > ul > li > button {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+  letter-spacing: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  transition: opacity .3s ease-out, line-height .3s ease-out, height .3s ease-out, color .0s ease-out;
+}
+
+.header .nav-menu > ul > li:hover > a,
+.header .nav-menu > ul > li:hover > button {
+  opacity: 0.6;
+}
+
+.nav-dropdown ul li,
+.nav-dropdown ul li button {
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.nav-dropdown ul li button,
+.nav-dropdown-sub ul li button {
+  color: rgba(0, 0, 0, 0.6);
+  display: inline-block;
+  text-align: left;
+}
+
+@media all and (min-width: 992px) {
+  .header .nav-menu > ul > li > a,
+  .header .nav-menu > ul > li > button {
+    height: 90px;
+    line-height: 1;
+  }
+
+  .header.header-fixed .nav-menu > ul > li > a,
+  .header.header-fixed .nav-menu > ul > li > button {
+    height: 66px;
+  }
+}
+
+@media all and (max-width: 991px) {
+  .header .nav-menu > ul > li > a,
+  .header .nav-menu > ul > li > button {
+    line-height: normal;
+    text-align: left;
+  }
+}
+
+/* Preserve styled CTA buttons */
+.header .btn,
+.footer .btn {
+  -webkit-appearance: auto;
+  appearance: auto;
+}
+
+@media (max-width: 767px) {
+  .hide-mobile-section {
+    display: none;
+  }
+}
